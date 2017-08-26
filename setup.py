@@ -1,14 +1,10 @@
 from setuptools import setup
 
 setup(
-    name='python-i18n',
+    name='happypandax-i18n',
     version='0.3.1',
     description='Translation library for Python',
     long_description=open('README.md').read(),
-    author='Daniel Perez',
-    author_email='tuvistavie@gmail.com',
-    url='https://github.com/tuvistavie/python-i18n',
-    download_url='https://github.com/tuvistavie/python-i18n/archive/master.zip',
     license='MIT',
     packages=['i18n', 'i18n.loaders', 'i18n.tests'],
     include_package_data=True,
