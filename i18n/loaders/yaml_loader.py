@@ -11,7 +11,7 @@ class YamlLoader(Loader):
         try:
             return yaml.safe_load(file_content)
         except yaml.scanner.ScannerError as e:
-            raise i18n.loaders.loader.I18nFileLoadError("invalid YAML: {0}".format(str(e)))
+            raise I18nFileLoadError("invalid YAML: {0}".format(str(e)))
 
     def get_data(self, data, root_data):
         return data
