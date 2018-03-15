@@ -53,11 +53,22 @@ def pluralize(key, translation, count):
         if count == 0:
             if 'zero' in translation:
                 return translation['zero']
+            elif 'one' in translation
+                return translation['one']
         elif count == 1:
             if 'one' in translation:
                 return translation['one']
+            if 'zero' in translation:
+                return translation['zero']
         elif count <= config.get('plural_few'):
             if 'few' in translation:
+                return translation['few']
+            elif 'many' in translation:
+                return translation['many']
+        elif count > config.get('plural_few'):
+            if 'many' in translation:
+                return translation['many']
+            elif 'few' in translation:
                 return translation['few']
         if 'other' in translation:
             return translation['other']
