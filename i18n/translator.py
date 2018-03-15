@@ -39,6 +39,8 @@ def t(key, **kwargs):
 def translate(key, **kwargs):
     locale = kwargs.pop('locale', config.get('locale'))
     translation = translations.get(key, locale=locale)
+    if isinstance(translation, dict) and 'count' not in kwargs:
+        kwargs['count'] = 0
     if 'count' in kwargs:
         translation = pluralize(key, translation, kwargs['count'])
     return TranslationFormatter(translation).format(**kwargs)
