@@ -53,7 +53,7 @@ def pluralize(key, translation, count):
         if count == 0:
             if 'zero' in translation:
                 return translation['zero']
-            elif 'one' in translation
+            elif 'one' in translation:
                 return translation['one']
         elif count == 1:
             if 'one' in translation:
