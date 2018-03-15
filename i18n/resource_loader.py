@@ -74,7 +74,7 @@ def load_translation_dic(dic, namespace, locale):
     if namespace:
         namespace += config.get('namespace_delimiter')
     for key, value in dic.items():
-        if type(value) == dict:
+        if type(value) == dict and config.get('namespace_in_file'):
             load_translation_dic(value, namespace + key, locale)
         else:
             translations.add(namespace + key, value, locale)

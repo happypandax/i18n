@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='happypandax-i18n',
-    version='0.3.1',
+    version='0.3.2',
     description='Translation library for Python',
     long_description=open('README.md').read(),
     license='MIT',

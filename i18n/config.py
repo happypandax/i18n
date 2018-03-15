@@ -23,6 +23,7 @@ settings = {
     'error_on_missing_plural': False,
     'encoding': 'utf-8',
     'namespace_delimiter': '.',
+    'namespace_in_file': False,
     'plural_few': 5
 }
 
